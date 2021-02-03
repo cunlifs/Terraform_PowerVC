@@ -17,7 +17,7 @@
 provider "openstack" {
     user_name   = var.openstack_user_name
     password    = var.openstack_password
-    tenant_name = var.openstack_new_project_name
+    tenant_name = var.openstack_default_project_name
     domain_name = var.openstack_domain_name
     auth_url    = var.openstack_auth_url
     insecure    = true
