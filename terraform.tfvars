@@ -14,29 +14,29 @@
 ################################################################
 
 # Authentication
-openstack_user_name="cunlifs"
+openstack_user_name="root"
 openstack_project_user_id="f021608837ec327fb575bf848d553466ef1eb57ee46b863c603ae63efc944af9"
-openstack_password="password"
+openstack_password="Passw0rd"
 openstack_admin_role="47d2a6f71c88422d9536e9e890fa1f86"
 
 # OpenStack Environment
 openstack_default_project_name="ibm-default"
 openstack_new_project_name="sc-app-project-1"
 openstack_domain_name="Default"
-openstack_auth_url="https://PowerVC IP:5000/v3/"
+openstack_auth_url="https://p9-powervc:5000/v3/"
 
 # Images
 openstack_image_id_AIX7_1="b3ae886a-928e-4584-ad8a-b23b52fa687e"
-openstack_image_id_AIX7_2="f9cf6949-56f0-4214-97a6-a21aa7284615"
+openstack_image_id_AIX7_2="02970333-7b77-47e3-a415-9a479ee40fda"
 
 # Compute templates
-openstack_flavor_id_node_small="ca56c117-c43d-43c6-adc3-f7eab4b93c2e"
-openstack_flavor_id_node_medium="560bbfb5-5d2e-4840-82c1-5c20672b3a7e"
-openstack_flavor_id_node_large="af060552-631b-47b7-a655-a191ebe82886"
+openstack_flavor_id_node_small="4f04d2dc-846b-4ae0-ab55-8ac60287f059"
+openstack_flavor_id_node_medium="434a5c12-3242-4f37-b68b-e3e199be3b3d"
+openstack_flavor_id_node_large="c3d17953-6811-4fbc-95e1-2a0185273a5a"
 
 # Network
-openstack_network_id="33cd203d-3968-4ba8-ac1e-ccfce402150c"
-openstack_network_name="VLAN_156"
+openstack_network_id="c9c6e150-72d4-40e6-83bc-e16dc4e57ec6"
+openstack_network_name="VLAN 1"
 
 # SSH
-openstack_ssh_key_file="/dir/.ssh/id_rsa"
+openstack_ssh_key_file="/root/.ssh/id_rsa"
