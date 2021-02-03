@@ -16,14 +16,14 @@
 # Authentication
 openstack_user_name="cunlifs"
 openstack_project_user_id="f021608837ec327fb575bf848d553466ef1eb57ee46b863c603ae63efc944af9"
-openstack_password="t3stc3ll"
+openstack_password="password"
 openstack_admin_role="47d2a6f71c88422d9536e9e890fa1f86"
 
 # OpenStack Environment
 openstack_default_project_name="ibm-default"
 openstack_new_project_name="sc-app-project-1"
 openstack_domain_name="Default"
-openstack_auth_url="https://9.196.156.57:5000/v3/"
+openstack_auth_url="https://PowerVC IP:5000/v3/"
 
 # Images
 openstack_image_id_AIX7_1="b3ae886a-928e-4584-ad8a-b23b52fa687e"
@@ -39,4 +39,4 @@ openstack_network_id="33cd203d-3968-4ba8-ac1e-ccfce402150c"
 openstack_network_name="VLAN_156"
 
 # SSH
-openstack_ssh_key_file="/Users/stucunliffe/.ssh/id_rsa"
+openstack_ssh_key_file="/dir/.ssh/id_rsa"
