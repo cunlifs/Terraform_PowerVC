@@ -14,19 +14,17 @@
 ################################################################
 
 # Authentication
-openstack_user_name="root"
+openstack_user_name="<id>"
 openstack_project_user_id="f021608837ec327fb575bf848d553466ef1eb57ee46b863c603ae63efc944af9"
-openstack_password="Passw0rd"
+openstack_password="<password>"
 openstack_admin_role="47d2a6f71c88422d9536e9e890fa1f86"
 
 # OpenStack Environment
 openstack_default_project_name="ibm-default"
-openstack_new_project_name="sc-app-project-1"
 openstack_domain_name="Default"
-openstack_auth_url="https://p9-powervc:5000/v3/"
+openstack_auth_url="https://<powervc_host>:5000/v3/"
 
 # Images
-openstack_image_id_AIX7_1="b3ae886a-928e-4584-ad8a-b23b52fa687e"
 openstack_image_id_AIX7_2="02970333-7b77-47e3-a415-9a479ee40fda"
 
 # Compute templates
