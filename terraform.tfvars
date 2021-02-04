@@ -26,7 +26,6 @@ openstack_domain_name="Default"
 openstack_auth_url="https://p9-powervc:5000/v3/"
 
 # Images
-openstack_image_id_AIX7_1="b3ae886a-928e-4584-ad8a-b23b52fa687e"
 openstack_image_id_AIX7_2="02970333-7b77-47e3-a415-9a479ee40fda"
 
 # Compute templates
