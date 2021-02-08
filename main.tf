@@ -32,10 +32,10 @@ resource "openstack_compute_keypair_v2" "vm-key-pair" {
     public_key = file("${var.openstack_ssh_key_file}.pub")
 }
 
-resource "openstack_compute_instance_v2" "sc-app-vm" {
+resource "openstack_compute_instance_v2" "smc-vm" {
     count     = 1
     name      = format("sc-app-aix-vm-${random_id.rand.hex}-%02d", count.index+1)
-    image_id  = var.openstack_image_id_AIX7_2
+    image_id  = var.openstack_image_id_SLES15_SP2
     flavor_id = var.openstack_flavor_id_node_small
     key_pair  = openstack_compute_keypair_v2.vm-key-pair.name
 
