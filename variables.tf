@@ -1,5 +1,5 @@
 ################################################################
-# Module to deploy IBM Cloud Private
+# Module to deploy VM via PowerVC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -51,6 +51,10 @@ variable "openstack_image_id_AIX7_1" {
 
 variable "openstack_image_id_AIX7_2" {
     description = "The ID of the image to be used for AIX 7.2 deploy operations."
+}
+
+variable "openstack_image_id_SLES15_SP2" {
+    description = "The ID of the image to be used for SLES 15 SP2 deploy operations."
 }
 
 variable "openstack_flavor_id_node_small" {
