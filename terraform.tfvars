@@ -1,6 +1,7 @@
 ################################################################
-# Module to deploy IBM Cloud Private
-#
+# Module to deploy a VM via PowerVC
+# Author: Stu Cunliffe - IBM
+# 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -25,7 +26,7 @@ openstack_domain_name="Default"
 openstack_auth_url="https://<powervc_host>:5000/v3/"
 
 # Images
-openstack_image_id_AIX7_2="02970333-7b77-47e3-a415-9a479ee40fda"
+openstack_image_id_SLES15_SP2="6d16a557-9af6-4d19-8f22-d5df8da1a539"
 
 # Compute templates
 openstack_flavor_id_node_small="4f04d2dc-846b-4ae0-ab55-8ac60287f059"
