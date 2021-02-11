@@ -29,9 +29,9 @@ variable "openstack_default_project_name" {
     description = "The name of the default admin project (a.k.a. tenant) used."
 }
 
-variable "openstack_new_project_name" {
-    description = "The name of the new user project (a.k.a. tenant) used."
-}
+#variable "openstack_new_project_name" {
+#    description = "The name of the new user project (a.k.a. tenant) used."
+#}
 
 variable "openstack_project_user_id" {
     description = "The user name for a given project"
