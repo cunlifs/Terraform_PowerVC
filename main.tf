@@ -29,7 +29,7 @@ resource "random_id" "rand" {
 
 resource "openstack_compute_keypair_v2" "vm-key-pair" {
     name       = "terraform-vm-key-pair-${random_id.rand.hex}"
-    public_key = file("${var.public_key_file}")
+    public_key = file("var.public_key_file")
 }
 
 output "ssh_key" {
