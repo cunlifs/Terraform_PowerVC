@@ -1,9 +1,9 @@
 output "private_key" {
-  value = var.private_key
+  value = local.private_key
 }
 
 output "public_key" {
-  value = var.public_key
+  value = local.public_key
 }
 
 output "private_key_file" {
