@@ -69,11 +69,7 @@ variable "openstack_network_name" {
     description = "The name of the network to be used for deploy operations."
 }
 
-variable "openstack_ssh_key_file" {
-    description = "The path to the SSH key file."
-    default = ""
-}
-
+# SSH and connection variables
 variable "ssh_agent" {
     description = "Enable or disable SSH Agent. Can correct some connectivity issues. Default: false"
     default     = false
@@ -107,13 +103,13 @@ variable "private_key_file" {
 }
 
 variable "private_key" {
-    description = "content of private ssh key"
+    description = "Content of private SSH key"
     # if empty string will read contents of file at var.private_key_file
     default = ""
 }
 
 variable "public_key" {
-    description = "Public key"
+    description = "Content of the Public SSH key"
     # if empty string will read contents of file at var.public_key_file
     default     = ""
 }

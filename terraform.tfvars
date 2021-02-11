@@ -37,6 +37,7 @@ openstack_flavor_id_node_large="c3d17953-6811-4fbc-95e1-2a0185273a5a"
 openstack_network_id="c9c6e150-72d4-40e6-83bc-e16dc4e57ec6"
 openstack_network_name="VLAN 1"
 
-# SSH
+# SSH key and connection information
+sles_username="root"
 private_key_file="/root/.ssh/id_rsa"
 public_key_file="/root/.ssh/id_rsa.pub"
