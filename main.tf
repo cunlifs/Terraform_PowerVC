@@ -52,7 +52,7 @@ resource "openstack_compute_instance_v2" "smc-vm" {
             type        = "ssh"
             user        = var.sles_username
             host        = self.access_ip_v4
-            private_key = file("${var.private_key}")
+            private_key = file("${var.private_key_file}")
             agent       = var.ssh_agent
             timeout     = "${var.connection_timeout}m"
         }
