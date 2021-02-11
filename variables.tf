@@ -71,4 +71,57 @@ variable "openstack_network_name" {
 
 variable "openstack_ssh_key_file" {
     description = "The path to the SSH key file."
+    default = ""
+}
+
+variable "ssh_agent" {
+    description = "Enable or disable SSH Agent. Can correct some connectivity issues. Default: false"
+    default     = false
+}
+
+variable "connection_timeout" {
+    description = "Timeout in minutes for SSH connections"
+    default     = 45
+}
+
+variable "sles_username" {
+    default = "root"
+}
+
+variable "keypair_name" {
+  # Set this variable to the name of an already generated
+  # keypair to use it instead of creating a new one.
+  default = ""
+}
+
+variable "public_key_file" {
+    description = "Path to public key file"
+    # if empty, will default to ${path.cwd}/data/id_rsa.pub
+    default     = ""
+}
+
+variable "private_key_file" {
+    description = "Path to private key file"
+    # if empty, will default to ${path.cwd}/data/id_rsa
+    default     = ""
+}
+
+variable "private_key" {
+    description = "content of private ssh key"
+    # if empty string will read contents of file at var.private_key_file
+    default = ""
+}
+
+variable "public_key" {
+    description = "Public key"
+    # if empty string will read contents of file at var.public_key_file
+    default     = ""
+}
+
+locals {
+    private_key_file    = "${var.private_key_file == "" ? "${path.cwd}/data/id_rsa" : "${var.private_key_file}" }"
+    public_key_file     = "${var.public_key_file == "" ? "${path.cwd}/data/id_rsa.pub" : "${var.public_key_file}" }"
+    private_key         = "${var.private_key == "" ? file(coalesce(local.private_key_file, "/dev/null")) : "${var.private_key}" }"
+    public_key          = "${var.public_key == "" ? file(coalesce(local.public_key_file, "/dev/null")) : "${var.public_key}" }"
+    create_keypair      = "${var.keypair_name == "" ? "1": "0"}"
 }

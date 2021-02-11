@@ -38,4 +38,5 @@ openstack_network_id="c9c6e150-72d4-40e6-83bc-e16dc4e57ec6"
 openstack_network_name="VLAN 1"
 
 # SSH
-openstack_ssh_key_file="/root/.ssh/id_rsa"
+private_key_file="/root/.ssh/id_rsa"
+public_key_file="/root/.ssh/id_rsa.pub"

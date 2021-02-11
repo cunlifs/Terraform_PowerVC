@@ -29,7 +29,7 @@ resource "random_id" "rand" {
 
 resource "openstack_compute_keypair_v2" "vm-key-pair" {
     name       = "terraform-vm-key-pair-${random_id.rand.hex}"
-    public_key = file("${var.openstack_ssh_key_file}.pub")
+    public_key = file("${var.public_key_file}")
 }
 
 resource "openstack_compute_instance_v2" "smc-vm" {
@@ -43,6 +43,22 @@ resource "openstack_compute_instance_v2" "smc-vm" {
         uuid = var.openstack_network_id
         name = var.openstack_network_name
     }
+    provisioner "remote-exec" {
+        connection {
+            type        = "ssh"
+            user        = var.sles_username
+            host        = self.access_ip_v4
+            private_key = var.private_key
+            agent       = var.ssh_agent
+            timeout     = "${var.connection_timeout}m"
+        }
 
+        on_failure  = continue
+        inline = [
+             "cat /etc/hosts"
+#            "sudo subscription-manager unregister",
+#            "sudo subscription-manager remove --all",
+        ]
+    }
 #    user_data = file("bootstrap_icp_worker.sh")
 }
