@@ -32,10 +32,6 @@ resource "openstack_compute_keypair_v2" "vm-key-pair" {
     public_key = file("${var.public_key_file}")
 }
 
-output "ssh_key" {
-  value = var.private_key
-}
-
 resource "openstack_compute_instance_v2" "smc-vm" {
     count     = 1
     name      = format("sc-sles-vm-${random_id.rand.hex}-%02d", count.index+1)
