@@ -1,7 +1,7 @@
 ################################################################
 # Module to deploy a VM via PowerVC
 # Author: Stu Cunliffe - IBM
-# 
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -15,15 +15,15 @@
 ################################################################
 
 # Authentication
-openstack_user_name="<id>"
+openstack_user_name="root"
 openstack_project_user_id="f021608837ec327fb575bf848d553466ef1eb57ee46b863c603ae63efc944af9"
-openstack_password="<password>"
+openstack_password="Passw0rd"
 openstack_admin_role="47d2a6f71c88422d9536e9e890fa1f86"
 
 # OpenStack Environment
 openstack_default_project_name="ibm-default"
 openstack_domain_name="Default"
-openstack_auth_url="https://<powervc_host>:5000/v3/"
+openstack_auth_url="https://p9-powervc:5000/v3/"
 
 # Images
 openstack_image_id_SLES15_SP2="6d16a557-9af6-4d19-8f22-d5df8da1a539"
