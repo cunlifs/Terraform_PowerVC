@@ -45,14 +45,6 @@ variable "openstack_auth_url" {
     description = "The endpoint URL used to connect to OpenStack."
 }
 
-variable "openstack_image_id_AIX7_1" {
-    description = "The ID of the image to be used for AIX 7.1 deploy operations."
-}
-
-variable "openstack_image_id_AIX7_2" {
-    description = "The ID of the image to be used for AIX 7.2 deploy operations."
-}
-
 variable "openstack_image_id_SLES15_SP2" {
     description = "The ID of the image to be used for SLES 15 SP2 deploy operations."
 }
