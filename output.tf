@@ -1,15 +1,7 @@
-output "private_key" {
-  value = local.private_key
+output "VM_name" {
+  value = openstack_compute_instance_v2.smc-vm.*.name
 }
 
-output "public_key" {
-  value = local.public_key
-}
-
-output "private_key_file" {
-  value = var.private_key_file
-}
-
-output "public_key_file" {
-  value = var.public_key_file
+output "VM_IPs" {
+    value = openstack_compute_instance_v2.smc-vm.*.access_ip_v4
 }
