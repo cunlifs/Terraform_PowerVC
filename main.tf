@@ -56,8 +56,6 @@ resource "openstack_compute_instance_v2" "smc-vm" {
         on_failure  = continue
         inline = [
              "cat /etc/hosts"
-#            "sudo subscription-manager unregister",
-#            "sudo subscription-manager remove --all",
         ]
     }
 #    user_data = file("bootstrap_icp_worker.sh")
