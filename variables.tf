@@ -13,12 +13,16 @@
 #
 ################################################################
 
-variable "openstack_user_name" {
-    description = "The user name used to connect to OpenStack."
+variable "openstack_password" {
+    description = "The password for the user - add to vars file or leave for prompted response"
+    type = string
+    sensitive = true
 }
 
-variable "openstack_password" {
-    description = "The password for the user."
+variable "openstack_user_name" {
+    description = "The user name used to connect to OpenStack - - add to vars file or leave for prompted response"
+    type = string
+    sensitive = true
 }
 
 variable "openstack_admin_role" {
